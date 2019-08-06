@@ -1,0 +1,23 @@
+<H1 class="text-center">Login!</H1>
+
+<div class="container">
+  <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+<div class="container-fluid">
+<form>
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input type="name" class="form-control" id="name" [(ngModel)]="username" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+
+  <button type="submit" class="btn btn-success" (click)="login()">Submit</button>
+
+</form>
+</div>
+</div>
